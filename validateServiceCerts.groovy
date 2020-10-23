@@ -66,7 +66,7 @@ pipeline {
                 script {
                     verdadArray.each {
                         if (it.value && it.key) {
-                            echo "Will send it to: ${it.key}@santander.pl"
+                            echo "Will send it to: ${it.key}@somemail.com"
                             alerts = it.value.join('<br>')
                             emailext body: """You have received this message because certificates with expiration date with less than ${days} days have been found. Please check list below and link to instruction provided at the bottom of this mail.
 
